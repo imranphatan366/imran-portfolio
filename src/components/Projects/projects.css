@@ -1,0 +1,481 @@
+/* =========================================================
+   PREMIUM PROJECT CARDS
+   ========================================================= */
+
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 100%;
+
+  overflow: hidden;
+
+  background: rgba(15, 23, 42, 0.78);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(14px);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+   ========================================================= */
+
+.project-card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(0, 200, 255, 0.35);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.4),
+    0 0 35px rgba(0, 200, 255, 0.08);
+}
+
+
+/* =========================================================
+   FEATURED BADGE
+   ========================================================= */
+
+.featured-badge {
+  position: absolute;
+
+  top: 16px;
+  left: 16px;
+
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 8px 13px;
+
+  border-radius: 30px;
+
+  background: rgba(0, 200, 255, 0.9);
+
+  color: #06131a;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  box-shadow:
+    0 5px 20px rgba(0, 200, 255, 0.25);
+}
+
+.featured-badge svg {
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.project-image-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 230px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0f172a,
+      #111827
+    );
+}
+
+
+.project-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+
+.project-card:hover .project-image {
+  transform: scale(1.06);
+
+  filter: brightness(0.72);
+}
+
+
+/* =========================================================
+   IMAGE PLACEHOLDER
+   ========================================================= */
+
+.project-image-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+   ========================================================= */
+
+.project-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  background: rgba(0, 0, 0, 0.42);
+
+  opacity: 0;
+
+  transition:
+    opacity 0.35s ease;
+}
+
+
+.project-card:hover .project-image-overlay {
+  opacity: 1;
+}
+
+
+.project-image-overlay svg {
+  transition:
+    transform 0.3s ease;
+}
+
+
+.project-card:hover .project-image-overlay svg {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  padding: 25px;
+}
+
+
+/* =========================================================
+   CATEGORY
+   ========================================================= */
+
+.project-category {
+  margin-bottom: 9px;
+
+  color: #22d3ee;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.project-title {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.project-description {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   TECHNOLOGIES
+   ========================================================= */
+
+.project-technologies {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 20px;
+}
+
+
+.technology-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 6px 10px;
+
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.055);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 11px;
+  font-weight: 500;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.technology-badge:hover {
+  background: rgba(34, 211, 238, 0.08);
+
+  border-color: rgba(34, 211, 238, 0.25);
+
+  color: #67e8f9;
+}
+
+
+/* =========================================================
+   BUTTON AREA
+   ========================================================= */
+
+.project-actions {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: auto;
+  padding-top: 25px;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.project-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 42px;
+
+  padding: 10px 16px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   GITHUB BUTTON
+   ========================================================= */
+
+.github-btn {
+  flex: 1;
+
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.github-btn:hover {
+  transform: translateY(-2px);
+
+  background: rgba(255, 255, 255, 0.11);
+
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================================================
+   DEMO BUTTON
+   ========================================================= */
+
+.demo-btn {
+  flex: 1;
+
+  color: #06131a;
+
+  background: #22d3ee;
+
+  border: 1px solid #22d3ee;
+
+  box-shadow:
+    0 5px 18px rgba(34, 211, 238, 0.15);
+}
+
+
+.demo-btn:hover {
+  transform: translateY(-2px);
+
+  background: #67e8f9;
+
+  border-color: #67e8f9;
+
+  box-shadow:
+    0 8px 25px rgba(34, 211, 238, 0.25);
+}
+
+
+/* =========================================================
+   DISABLED BUTTON
+   ========================================================= */
+
+.disabled-btn {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+.disabled-btn:hover {
+  transform: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .project-image-wrapper {
+    height: 210px;
+  }
+
+  .project-content {
+    padding: 21px;
+  }
+
+  .project-title {
+    font-size: 22px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .project-card {
+    border-radius: 17px;
+  }
+
+  .project-image-wrapper {
+    height: 200px;
+  }
+
+  .project-content {
+    padding: 19px;
+  }
+
+  .project-title {
+    font-size: 21px;
+  }
+
+  .project-description {
+    font-size: 13px;
+  }
+
+  .project-actions {
+    flex-direction: column;
+  }
+
+  .project-btn {
+    width: 100%;
+  }
+
+  .featured-badge {
+    top: 12px;
+    left: 12px;
+
+    padding: 7px 10px;
+
+    font-size: 10px;
+  }
+}
