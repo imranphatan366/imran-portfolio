@@ -211,7 +211,7 @@ function Contact() {
             <div className="flex gap-4 mt-7">
 
               <a
-                href="https://github.com/BASITH-art"
+                href="https://github.com/imranphatan366"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="

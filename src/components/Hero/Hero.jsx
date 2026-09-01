@@ -152,7 +152,7 @@ function Hero() {
             {/* GitHub */}
 
             <a
-              href="https://github.com/BASITH-art"
+              href="https://github.com/imranphatan366"
               target="_blank"
               rel="noopener noreferrer"
               className="

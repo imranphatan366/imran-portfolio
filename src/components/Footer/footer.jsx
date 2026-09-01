@@ -133,7 +133,7 @@ function Footer() {
             <div className="flex gap-3">
 
               <a
-                href="https://github.com/BASITH-art"
+                href="https://github.com/imranphatan366"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -159,7 +159,7 @@ function Footer() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/shaik-basith-067aab375"
+                href="https://www.linkedin.com/in/imran-pattan-338b7a411/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -185,7 +185,7 @@ function Footer() {
               </a>
 
               <a
-                href="mailto:shaik786basith@gmail.com"
+                href="mailto:imranphatan366@gmail.com"
                 aria-label="Email"
                 className="
                   w-11
